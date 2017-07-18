@@ -1,19 +1,15 @@
  // TRI
-    // var cards = document.getElementsByClassName("img");
-    // var images = [];
-    // var ordre = [1,1,2,2,3,3,4,4,5,5,6,6,7,7];
-
+ 
    // CHANGE ORDER OF T
-    // for(var i = 0; i < ordre.length; i++){
-    //     var rand = Math.floor(Math.random()*cards.length);
-    //     var valeur = ordre[rand];
-        // console.log(valeur);
-      // cards[i].style.backgroundColor ="#"+ordre[i]+"00000";
-    //   cards[i].value = ordre[i];
-    //   console.log(cards[i]);
-    //   cards[i].src ="img/"+ordre[i]+".jpg";
+    // for(var position=T.length-1; position>=1; position--){
+    //     var hasard=Math.floor(Math.random()*(position+1));
+    //     var sauve=T[position];
+    //     T[position]=T[hasard];
+    //     T[hasard]=sauve;
     // }
+    // cards[i].style.background = couleur[ordre];     
 
+    // console.log(T);
     //    for(var position = ordre.length-1; position>=1; position++){
     //     var hasard=Math.floor(Math.random()*(position+1));
     //     var sauve=ordre[position];
@@ -82,20 +78,19 @@
                  
 // }
 
-
 var couleur = ["red", "red", "yellow", "yellow", "blue", "blue", "green", "green", "black", "black", "pink", "pink", "purple", "purple"];
 var rand = [];
 
-
-function aleatoire(){
-  for(i=0; i<couleur.length; i++){
+  for(i=0; i<14; i++){
       var ordre = Math.floor(Math.random()*couleur.length);
+      console.log("ordre :" + ordre);
       console.log(couleur[ordre]);
       rand.push(couleur[ordre]);
       console.log[rand];
-      document.getElementsByTagName('DIV')[i].style.background = couleur[ordre];     
+      document.getElementsByTagName('DIV')[i].style.background = couleur[ordre];
+      couleur.splice(ordre, 1);     
   }
-}
+
 
 
 
