@@ -107,10 +107,15 @@ textarea {
     width: 100px;
     border-radius: 10px;
     margin: 1em;
-    border: 1px solid black;
 }
 
-
+.border
+{
+    height: 202px;
+    width: 102px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
 
 
 

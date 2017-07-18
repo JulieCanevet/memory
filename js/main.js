@@ -78,18 +78,50 @@
                  
 // }
 
+// Repartition aleatoire des cartes
 var couleur = ["red", "red", "yellow", "yellow", "blue", "blue", "green", "green", "black", "black", "pink", "pink", "purple", "purple"];
 var rand = [];
-
+var allImg = document.getElementsByClassName("carte");
+console.log(allImg);
   for(i=0; i<14; i++){
       var ordre = Math.floor(Math.random()*couleur.length);
       console.log("ordre :" + ordre);
       console.log(couleur[ordre]);
       rand.push(couleur[ordre]);
       console.log[rand];
-      document.getElementsByTagName('DIV')[i].style.background = couleur[ordre];
+      allImg[i].style.background = couleur[ordre];
       couleur.splice(ordre, 1);     
   }
+
+for (let j=0; j < allImg.length; j++){
+  allImg[j].style.opacity = "0";
+  allImg[j].addEventListener("click", decouvrir);
+}
+
+
+
+function decouvrir(){
+  console.log(this);
+this.style.opacity = "1";
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
