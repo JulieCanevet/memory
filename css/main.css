@@ -101,18 +101,20 @@ textarea {
     flex-wrap: wrap;
 }
 
-#cartes div
+.carte
 {
     height: 200px;
     width: 100px;
     border-radius: 10px;
-    margin: 1em;
+    position: absolute;
 }
 
 .border
 {
-    height: 202px;
-    width: 102px;
+    height: 200px;
+        margin: 1em;
+
+    width: 100px;
     border-radius: 10px;
     border: 1px solid black;
 }
