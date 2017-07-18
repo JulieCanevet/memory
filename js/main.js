@@ -84,25 +84,17 @@
 
 
 var couleur = ["red", "red", "yellow", "yellow", "blue", "blue", "green", "green", "black", "black", "pink", "pink", "purple", "purple"];
-var rand = ["blanc", "blanc", "blanc", "blanc", "blanc", "blanc", "blanc", "blanc", "blanc", "blanc", "blanc", "blanc", "blanc", "blanc"];
+var rand = [];
 
 
 function aleatoire(){
   for(i=0; i<couleur.length; i++){
-      if(couleur[i] != "blanc"){
-        console.log(rand[i]);
-      couleur[i] = Math.floor(Math.random()*couleur.length);
-      rand[i] = couleur [i];
-      document.getElementsByClassName('carte').style.backgroundColor = "blue";
-      
-    }
-      else {
-      i--
-      console.log("me");
-      }
-    }
+      var ordre = Math.floor(Math.random()*couleur.length);
+      console.log(ordre);
+      rand.push(ordre);
+      document.getElementsByTagName('DIV')[i].style.background = couleur[i];     
   }
-
+}
 
 
 
