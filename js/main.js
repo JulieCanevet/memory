@@ -90,9 +90,10 @@ var rand = [];
 function aleatoire(){
   for(i=0; i<couleur.length; i++){
       var ordre = Math.floor(Math.random()*couleur.length);
-      console.log(ordre);
-      rand.push(ordre);
-      document.getElementsByTagName('DIV')[i].style.background = couleur[i];     
+      console.log(couleur[ordre]);
+      rand.push(couleur[ordre]);
+      console.log[rand];
+      document.getElementsByTagName('DIV')[i].style.background = couleur[ordre];     
   }
 }
 
