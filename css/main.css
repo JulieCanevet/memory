@@ -95,7 +95,20 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+#cartes
+{
+    display: flex;
+    flex-wrap: wrap;
+}
 
+#cartes div
+{
+    height: 200px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: blue;
+    margin: 1em;
+}
 
 
 
