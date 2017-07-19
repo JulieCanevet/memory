@@ -3,15 +3,11 @@ var rand = [];
 var allImg = document.getElementsByClassName("carte");
 var back = [];
 var gagne = [];
-console.log(allImg);
   
 // Repartition aleatoire des cartes
   for(i=0; i<14; i++){
       var ordre = Math.floor(Math.random()*couleur.length);
-      console.log("ordre :" + ordre);
-      console.log(couleur[ordre]);
       rand.push(couleur[ordre]);
-      console.log[rand];
       allImg[i].style.background = couleur[ordre];
       couleur.splice(ordre, 1);     
   }
@@ -24,14 +20,11 @@ for (let j=0; j < allImg.length; j++){
 
 // passer en opacité 1 au onclick
 function decouvrir(){
-  console.log(this);
   this.style.opacity = "1";
   back.push(this);
-  console.log(back);
   
   // Comparer et retourner si les cartes sont différentes
     if((back.length == 2) && (back[0].style.backgroundColor != back[1].style.backgroundColor)){
-      console.log("good");
       setTimeout(function(){
         back[0].style.opacity = "0";
         back[1].style.opacity = "0";
@@ -54,8 +47,9 @@ function decouvrir(){
 
 
 
-
-
+function rejouer() {
+  location.reload();
+}
 
 
 
