@@ -1,4 +1,4 @@
-var couleur = ["#D5D7CA", "#D5D7CA", "#D7D36C", "#D7D36C", "#ADA915", "#ADA915", "#486855", "#486855", "#4B9295", "#4B9295", "#79BBBA", "#79BBBA", "#EEE731", "#EEE731"];
+var images = ["#f00d79", "#f00d79", "#740df0", "#740df0", "#f0ac0d", "#f0ac0d", "#2318c1", "#2318c1", "#0df0e8", "#0df0e8", "#f00d14", "#f00d14", "#effc00", "#effc00"];
 var rand = [];
 var allImg = document.getElementsByClassName("carte");
 var back = [];
@@ -6,10 +6,10 @@ var gagne = [];
   
 // Repartition aleatoire des cartes
   for(i=0; i<14; i++){
-      var ordre = Math.floor(Math.random()*couleur.length);
-      rand.push(couleur[ordre]);
-      allImg[i].style.background = couleur[ordre];
-      couleur.splice(ordre, 1);     
+      var ordre = Math.floor(Math.random()*images.length);
+      rand.push(images[ordre]);
+      allImg[i].style.background = images[ordre];
+      images.splice(ordre, 1);     
   }
 
 // passer à opacité 0 + lancer fonction decouvrir au click
@@ -29,7 +29,7 @@ function decouvrir(){
         back[0].style.opacity = "0";
         back[1].style.opacity = "0";
         back = [];
-  }, 800);
+  }, 500);
 
         
     } 
